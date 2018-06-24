@@ -11,13 +11,13 @@ extern "C" {
 
 #include <stdint.h>
 #include <stdio.h>
-#include <cutils/klog.h>
 #include "boot_img_hdr.h"
 
 #define LIBBOOTIMG_VERSION 0x000203 // 0xMMNNPP
 #define LIBBOOTIMG_VERSION_STR "0.2.3"
 
-#ifdef DEBUG_KMSG
+//#ifdef DEBUG_KMSG
+#if 0
 #define LOG_DBG(fmt, ...) klog_write(3, "<3>%s: " fmt, "libbootimg", ##__VA_ARGS__)
 #elif DEBUG_STDOUT
 #define LOG_DBG printf("libbootimg: "); printf
